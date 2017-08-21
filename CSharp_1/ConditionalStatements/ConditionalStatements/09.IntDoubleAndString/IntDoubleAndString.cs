@@ -16,7 +16,7 @@ namespace _09.IntDoubleAndString
             switch (read)
             {
                 case "integer": Console.WriteLine(int.Parse(value) + 1); break;
-                case "real":  Console.WriteLine(double.Parse(value) + 1); break;
+                case "real": Console.WriteLine("{0:0.00}", double.Parse(value) + 1); break;
 
                 default:
                     Console.WriteLine(value + "*");
