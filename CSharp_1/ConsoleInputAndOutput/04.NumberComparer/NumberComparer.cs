@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace _04.NumberComparer
 {
-    class Program
+    class NumberComparer
     {
-        static void Main(string[] args)
+        static void Main()
         {
+            double input1 = Convert.ToDouble(Console.ReadLine());
+            double input2 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine(input1 >= input2 ? input1 : input2);
         }
     }
 }

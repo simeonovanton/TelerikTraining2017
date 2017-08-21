@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.CompanyInfo", "02.Compan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.Circle", "03.Circle\03.Circle.csproj", "{64BEBCBF-1610-4BF0-B190-5EFD17DE8B50}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.NumberComparer", "04.NumberComparer\04.NumberComparer.csproj", "{A3A9BBE5-F2D0-4BAF-8953-953BBDE18B73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.QuadraticEquation", "06.QuadraticEquation\06.QuadraticEquation.csproj", "{2B51DC42-91E5-4127-88E3-9CD9402D269E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{64BEBCBF-1610-4BF0-B190-5EFD17DE8B50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64BEBCBF-1610-4BF0-B190-5EFD17DE8B50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64BEBCBF-1610-4BF0-B190-5EFD17DE8B50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3A9BBE5-F2D0-4BAF-8953-953BBDE18B73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3A9BBE5-F2D0-4BAF-8953-953BBDE18B73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3A9BBE5-F2D0-4BAF-8953-953BBDE18B73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3A9BBE5-F2D0-4BAF-8953-953BBDE18B73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B51DC42-91E5-4127-88E3-9CD9402D269E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B51DC42-91E5-4127-88E3-9CD9402D269E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B51DC42-91E5-4127-88E3-9CD9402D269E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B51DC42-91E5-4127-88E3-9CD9402D269E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
