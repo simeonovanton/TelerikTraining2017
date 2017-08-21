@@ -24,9 +24,9 @@ namespace _10.FibonacciNumbers
             else
             {
                 Console.Write("0, 1");
-                int first = 0;
-                int second = 1;
-                int third = first + second;
+                long first = 0;
+                long second = 1;
+                long third = first + second;
                 for (int i = 1; i <= n - 2 ; i++)
                 {
                     third = first + second;
