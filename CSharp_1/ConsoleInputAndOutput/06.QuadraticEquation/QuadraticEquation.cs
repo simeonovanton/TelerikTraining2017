@@ -18,7 +18,7 @@ namespace _06.QuadraticEquation
             if ( D > 0 )
             {
                 double x1 = (-b + Math.Sqrt(D)) / (2 * a);
-                double x2 = (-b + Math.Sqrt(D)) / (2 * a);
+                double x2 = (-b - Math.Sqrt(D)) / (2 * a);
                 Console.WriteLine("{0:0.00}", x1 < x2 ? x1 : x2);
                 Console.WriteLine("{0:0.00}", x1 < x2 ? x2 : x1);
 
