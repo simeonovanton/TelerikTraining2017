@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.NumberFrom1ToN", "01.NumberFrom1ToN\01.NumberFrom1ToN.csproj", "{2C1C3051-64F0-4BEC-9D42-D0BF69EBDFFA}"
 EndProject
@@ -18,6 +18,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.Calculate3", "07.Calculate3\07.Calculate3.csproj", "{8C61583E-EF2A-42FC-9902-2F417A40B859}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.CatalanNumbers", "08.CatalanNumbers\08.CatalanNumbers.csproj", "{B366CAC7-8B32-457A-B73D-404E7733D5F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.MatrixOfNumbers", "09.MatrixOfNumbers\09.MatrixOfNumbers.csproj", "{17394A2E-9480-4781-96CD-CC9EB04C1FD5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{B366CAC7-8B32-457A-B73D-404E7733D5F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B366CAC7-8B32-457A-B73D-404E7733D5F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B366CAC7-8B32-457A-B73D-404E7733D5F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17394A2E-9480-4781-96CD-CC9EB04C1FD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17394A2E-9480-4781-96CD-CC9EB04C1FD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17394A2E-9480-4781-96CD-CC9EB04C1FD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17394A2E-9480-4781-96CD-CC9EB04C1FD5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
