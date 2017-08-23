@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.NumberFrom1ToN", "01.NumberFrom1ToN\01.NumberFrom1ToN.csproj", "{2C1C3051-64F0-4BEC-9D42-D0BF69EBDFFA}"
 EndProject
@@ -34,6 +34,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15.GCD", "15.GCD\15.GCD.csproj", "{1E7ECC96-7DDF-46AE-9185-2392F803249A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16.Trailing0InN", "16.Trailing0InN\16.Trailing0InN.csproj", "{3D3A910A-C298-42CB-BA10-7432B48AEA6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17.SpiralMatrix", "17.SpiralMatrix\17.SpiralMatrix.csproj", "{665DDBA8-4FB9-41A0-9BD8-E6BA6B34A2DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +107,10 @@ Global
 		{3D3A910A-C298-42CB-BA10-7432B48AEA6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D3A910A-C298-42CB-BA10-7432B48AEA6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D3A910A-C298-42CB-BA10-7432B48AEA6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{665DDBA8-4FB9-41A0-9BD8-E6BA6B34A2DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{665DDBA8-4FB9-41A0-9BD8-E6BA6B34A2DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{665DDBA8-4FB9-41A0-9BD8-E6BA6B34A2DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{665DDBA8-4FB9-41A0-9BD8-E6BA6B34A2DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
