@@ -13,61 +13,71 @@ namespace _17.SpiralMatrix
             int n = int.Parse(Console.ReadLine());
             int counterX_Left = 0;
             int counterX_Right = 0;
-            int counterY_Up = 0;
+            int counterY_Up = 1;
             int counterY_Down = 0;
             int counter = 1;
             int ii = 1;
             int jj = 1;
+            int cursorPositionX = jj;
+            int cursorPositionY = ii;
 
 
             Right:
-            for (int j = 1 + counterX_Left; j <= n - counterX_Right; j++)
+            for (int j = jj + counterX_Left; j < jj + n - counterX_Right; j++)
             {
-                if (counter == n * n + 1)
+                if (counter >= n * n + 1)
                 {
                     break;
                 }
-                Console.SetCursorPosition(j, ii);
-                jj = j;
-                Console.Write(counter);
+                cursorPositionX = j;
+                Console.SetCursorPosition(cursorPositionX, cursorPositionY);
+                //jj = j;
+                Console.Write("{0}", "*");
+                Task.Delay(500).Wait();
                 counter++;
-                if (j == n - counterX_Right)
+                if (j == jj + n - counterX_Right - 1)
                 {
                     counterX_Right++;
+                    //ii++;
                     goto Down;
                 }
             }
 
             Down:
-            for (int i = 1 + counterY_Up; i <= n - counterY_Down; i++)
+            for (int i = ii + counterY_Up; i < ii + n - counterY_Down; i++)
             {
                 if (counter == n * n + 1)
                 {
                     break;
                 }
-                Console.SetCursorPosition(jj, i);
-                ii = i;
-                Console.Write(counter);
+                cursorPositionY = i;
+                Console.SetCursorPosition(cursorPositionX, cursorPositionY);
+                //ii = i;
+                Console.Write("{0}", "*");
+                Task.Delay(500).Wait();
                 counter++;
-                if (i == n - counterY_Down)
+                if (i == ii + n - counterY_Down - 1)
                 {
                     counterY_Down++;
+                    //jj--;
                     goto Left;
                 }
             }
 
             Left:
-            for (int j = n - counterX_Right; j >= 1 + counterX_Left; j--)
+            for (int j = jj + n - counterX_Right - 1; j >= jj + counterX_Left; j--)
             {
                 if (counter == n * n + 1)
                 {
                     break;
                 }
-                Console.SetCursorPosition(j, ii);
-                jj = j;
-                Console.Write(counter);
+                cursorPositionX = j;
+                Console.SetCursorPosition(cursorPositionX, cursorPositionY);
+                //jj = j;
+                Console.Write("{0}", "*");
+                Task.Delay(500).Wait();
                 counter++;
-                if (j == 1 + counterX_Left)
+                if (j == jj + counterX_Left)
                 {
                     counterX_Left++;
                     goto Up;
@@ -75,22 +85,27 @@ namespace _17.SpiralMatrix
             }
 
             Up:
-            for (int i = n - counterY_Down; i >= 1 + counterY_Up; i--)
+            for (int i = ii + n - counterY_Down - 1; i >= ii + counterY_Up; i--)
             {
                 if (counter == n * n + 1)
                 {
                     break;
                 }
-                Console.SetCursorPosition(jj, i);
-                ii = i;
-                Console.Write(counter);
+                cursorPositionY = i;
+                Console.SetCursorPosition(cursorPositionX, cursorPositionY);
+                //ii = i;
+                Console.Write("{0}", "*");
+                Task.Delay(500).Wait();
                 counter++;
-                if (i == 1 + counterY_Up)
+                if (i == ii + counterY_Up)
                 {
                     counterY_Up++;
                     goto Right;
                 }
             }
+            Console.SetCursorPosition(0, n + 1);
+            Console.WriteLine();
+
 
         }
     }
