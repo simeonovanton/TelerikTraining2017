@@ -16,10 +16,11 @@ namespace _17.SpiralMatrix
             int counterY_Up = 1;
             int counterY_Down = 0;
             int counter = 1;
-            int ii = 1;
-            int jj = 1;
+            int ii = 50;
+            int jj = 50;
             int cursorPositionX = jj;
             int cursorPositionY = ii;
+            //int nN = n * 4;
 
 
             Right:
@@ -30,10 +31,10 @@ namespace _17.SpiralMatrix
                     break;
                 }
                 cursorPositionX = j;
-                Console.SetCursorPosition(cursorPositionX, cursorPositionY);
+                Console.SetCursorPosition(cursorPositionX , cursorPositionY);
                 //jj = j;
-                Console.Write("{0}", "*");
-                Task.Delay(500).Wait();
+                Console.Write("{0}", counter);
+                Task.Delay(100).Wait();
                 counter++;
                 if (j == jj + n - counterX_Right - 1)
                 {
@@ -51,10 +52,10 @@ namespace _17.SpiralMatrix
                     break;
                 }
                 cursorPositionY = i;
-                Console.SetCursorPosition(cursorPositionX, cursorPositionY);
+                Console.SetCursorPosition(cursorPositionX , cursorPositionY);
                 //ii = i;
-                Console.Write("{0}", "*");
-                Task.Delay(500).Wait();
+                Console.Write("{0}", counter);
+                Task.Delay(100).Wait();
                 counter++;
                 if (i == ii + n - counterY_Down - 1)
                 {
@@ -72,10 +73,10 @@ namespace _17.SpiralMatrix
                     break;
                 }
                 cursorPositionX = j;
-                Console.SetCursorPosition(cursorPositionX, cursorPositionY);
+                Console.SetCursorPosition(cursorPositionX , cursorPositionY);
                 //jj = j;
-                Console.Write("{0}", "*");
-                Task.Delay(500).Wait();
+                Console.Write("{0}", counter);
+                Task.Delay(100).Wait();
                 counter++;
                 if (j == jj + counterX_Left)
                 {
@@ -92,10 +93,10 @@ namespace _17.SpiralMatrix
                     break;
                 }
                 cursorPositionY = i;
-                Console.SetCursorPosition(cursorPositionX, cursorPositionY);
+                Console.SetCursorPosition(cursorPositionX , cursorPositionY);
                 //ii = i;
-                Console.Write("{0}", "*");
-                Task.Delay(500).Wait();
+                Console.Write("{0}", counter);
+                Task.Delay(100).Wait();
                 counter++;
                 if (i == ii + counterY_Up)
                 {
@@ -103,7 +104,7 @@ namespace _17.SpiralMatrix
                     goto Right;
                 }
             }
-            Console.SetCursorPosition(0, n + 1);
+            Console.SetCursorPosition(0, ii + n + 1);
             Console.WriteLine();
 
 
