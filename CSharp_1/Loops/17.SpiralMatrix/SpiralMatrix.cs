@@ -16,11 +16,11 @@ namespace _17.SpiralMatrix
             int counterY_Up = 1;
             int counterY_Down = 0;
             int counter = 1;
-            int ii = 50;
-            int jj = 50;
+            int ii = 1;
+            int jj = 1;
             int cursorPositionX = jj;
             int cursorPositionY = ii;
-            //int nN = n * 4;
+            
 
 
             Right:
@@ -32,14 +32,12 @@ namespace _17.SpiralMatrix
                 }
                 cursorPositionX = j;
                 Console.SetCursorPosition(cursorPositionX , cursorPositionY);
-                //jj = j;
                 Console.Write("{0}", counter);
                 Task.Delay(100).Wait();
                 counter++;
                 if (j == jj + n - counterX_Right - 1)
                 {
                     counterX_Right++;
-                    //ii++;
                     goto Down;
                 }
             }
@@ -53,14 +51,12 @@ namespace _17.SpiralMatrix
                 }
                 cursorPositionY = i;
                 Console.SetCursorPosition(cursorPositionX , cursorPositionY);
-                //ii = i;
                 Console.Write("{0}", counter);
                 Task.Delay(100).Wait();
                 counter++;
                 if (i == ii + n - counterY_Down - 1)
                 {
                     counterY_Down++;
-                    //jj--;
                     goto Left;
                 }
             }
@@ -74,7 +70,6 @@ namespace _17.SpiralMatrix
                 }
                 cursorPositionX = j;
                 Console.SetCursorPosition(cursorPositionX , cursorPositionY);
-                //jj = j;
                 Console.Write("{0}", counter);
                 Task.Delay(100).Wait();
                 counter++;
@@ -93,8 +88,7 @@ namespace _17.SpiralMatrix
                     break;
                 }
                 cursorPositionY = i;
-                Console.SetCursorPosition(cursorPositionX , cursorPositionY);
-                //ii = i;
+                Console.SetCursorPosition(cursorPositionX , cursorPositionY);              
                 Console.Write("{0}", counter);
                 Task.Delay(100).Wait();
                 counter++;
