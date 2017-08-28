@@ -16,9 +16,10 @@ namespace _12.IndexOfLetters
             {
                 alphabet[i] = (char)(97 + i);
             }
-
+            // input string
             string input = Console.ReadLine();
 
+            // decoding
             foreach (char ch in input)
             {
                 for (int i = 0; i < 26; i++)
@@ -26,6 +27,7 @@ namespace _12.IndexOfLetters
                     if (ch == alphabet[i])
                     {
                         Console.WriteLine(i);
+                        break;
                     }
                 }
             }
