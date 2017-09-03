@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("13.MergeSort")]
+[assembly: AssemblyTitle("14.1MergeSortAnotherTry")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("13.MergeSort")]
+[assembly: AssemblyProduct("14.1MergeSortAnotherTry")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("40f6b5aa-fea9-49bd-be7c-696322bb9ab0")]
+[assembly: Guid("0cd796e1-5173-400e-aa95-74d1bc0649d9")]
 
 // Version information for an assembly consists of the following four values:
 //
