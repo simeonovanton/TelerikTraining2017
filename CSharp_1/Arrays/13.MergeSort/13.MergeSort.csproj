@@ -4,20 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-<<<<<<< HEAD
     <ProjectGuid>{5282D2DA-4418-4E53-A03C-F2657F7E4D5D}</ProjectGuid>
-=======
     <ProjectGuid>{40F6B5AA-FEA9-49BD-BE7C-696322BB9AB0}</ProjectGuid>
->>>>>>> db8951896e2ea2d324e73c43a4a16666d1ca09f8
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>_13.MergeSort</RootNamespace>
     <AssemblyName>13.MergeSort</AssemblyName>
-<<<<<<< HEAD
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
-=======
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
->>>>>>> db8951896e2ea2d324e73c43a4a16666d1ca09f8
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
@@ -51,7 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MergeSortAlgorithm.cs" />
+    <Compile Include="MergeSort.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
