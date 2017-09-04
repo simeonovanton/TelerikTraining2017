@@ -13,19 +13,19 @@ namespace _14._1MergeSortAnotherTry
             //Read input length and the input array
             int arrLength = int.Parse(Console.ReadLine());
             int[] arr = new int[arrLength];
+            int[] temp = new int[arrLength];
             for (int i = 0; i < arrLength; i++)
             {
                 arr[i] = int.Parse(Console.ReadLine());
             }
 
-            MergeAndSort(arr);
+            MergeAndSort(arr, temp, 0, arrLength / 2, arrLength);
         }
 
-        static void MergeAndSort(int[] )
+        static void MergeAndSort(int[] input, int[] temporary, int iL, int iM, int iR )
         {
 
-            int iMiddle = input.Length / 2;
-            Devide
+            
 
         }
 
