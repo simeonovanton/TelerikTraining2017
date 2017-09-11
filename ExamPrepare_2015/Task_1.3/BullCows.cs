@@ -36,59 +36,29 @@ namespace Task_1._3
                             temp[3] = l;
                             int currentBulls = 0;
                             int currentCows = 0;
-                            //--- check for 1st digit
+                            if (temp[3] == number[3])
+                            {
+                                currentBulls++;
+                            }
+                            if (temp[2] == number[2])
+                            {
+                                currentBulls++;
+                            }
+                            if (temp[1] == number[1])
+                            {
+                                currentBulls++;
+                            }
                             if (temp[0] == number[0])
                             {
                                 currentBulls++;
                             }
-                            else if (temp[0] == number[1])
-                            {
-                                currentCows++;
-                            }
-                            else if (temp[0] == number[2])
-                            {
-                                currentCows++;
-                            }
-                            else if (temp[0] == number[3])
-                            {
-                                currentCows++;
-                            }
-                            //--- check for 2nd digit
-                            if (temp[1] == number[0])
-                            {
-                                currentCows++;
-                            }
-                            else if (temp[1] == number[1])
+
+                            //--- check for 4th digit cows
+                           /* if (temp[3] == number[3])
                             {
                                 currentBulls++;
-                            }
-                            else if (temp[1] == number[2])
-                            {
-                                currentCows++;
-                            }
-                            else if (temp[1] == number[3])
-                            {
-                                currentCows++;
-                            }
-                            //--- check for 3rd digit
-                            if (temp[2] == number[0])
-                            {
-                                currentCows++;
-                            }
-                            else if (temp[2] == number[1])
-                            {
-                                currentCows++;
-                            }
-                            else if (temp[2] == number[2])
-                            {
-                                currentBulls++;
-                            }
-                            else if (temp[2] == number[3])
-                            {
-                                currentCows++;
-                            }
-                            //--- check for 4th digit
-                            if (temp[3] == number[0])
+                            }*/
+                            if (temp[3] == number[2])
                             {
                                 currentCows++;
                             }
@@ -96,16 +66,55 @@ namespace Task_1._3
                             {
                                 currentCows++;
                             }
-                            else if (temp[3] == number[2])
+                            else if (temp[3] == number[0])
                             {
                                 currentCows++;
                             }
-                            else if (temp[3] == number[3])
+                            //--- check for 3rd digit cows
+                            /*if (temp[2] == number[2])
                             {
                                 currentBulls++;
+                            } */
+                            if (temp[2] == number[3])
+                            {
+                                currentCows++;
                             }
+                            else if (temp[2] == number[1])
+                            {
+                                currentCows++;
+                            }
+                            else if (temp[2] == number[0])
+                            {
+                                currentCows++;
+                            }
+                            //--- check for 2nd digit cows
+                            if (temp[1] == number[3])
+                            {
+                                currentCows++;
+                            }
+                            else if (temp[1] == number[2])
+                            {
+                                currentCows++;
+                            }
+                            else if (temp[1] == number[0])
+                            {
+                                currentCows++;
+                            }
+                            //--- check for 1st digit cows
+                            if (temp[0] == number[3])
+                            {
+                                currentCows++;
+                            }
+                            else if (temp[0] == number[2])
+                            {
+                                currentCows++;
+                            }
+                            else if (temp[0] == number[1])
+                            {
+                                currentCows++;
+                            }                           
                             // check for total Bulls and Cows
-                            if (currentBulls == b && currentCows == c)
+                            if ((currentBulls == b) && (currentCows == c))
                             {
                                 Console.Write("{0}{1}{2}{3} ", temp[0], temp[1], temp[2], temp[3]);
                             }
