@@ -24,18 +24,96 @@ namespace Task_1._3
 
             for (int i = 1; i <= 9; i++)
             {
-                for (int j = 1 j < 9; j++)
+                temp[0] = i;
+                for (int j = 1; j <= 9; j++)
                 {
-
-                    for (int k = 1; k < 9; k++)
+                    temp[1] = j;
+                    for (int k = 1; k <= 9; k++)
                     {
-                        for (int l = 1; l < 9; l++)
+                        temp[2] = k;
+                        for (int l = 1; l <= 9; l++)
                         {
-
+                            temp[3] = l;
+                            int currentBulls = 0;
+                            int currentCows = 0;
+                            //--- check for 1st digit
+                            if (temp[0] == number[0])
+                            {
+                                currentBulls++;
+                            }
+                            else if (temp[0] == number[1])
+                            {
+                                currentCows++;
+                            }
+                            else if (temp[0] == number[2])
+                            {
+                                currentCows++;
+                            }
+                            else if (temp[0] == number[3])
+                            {
+                                currentCows++;
+                            }
+                            //--- check for 2nd digit
+                            if (temp[1] == number[0])
+                            {
+                                currentCows++;
+                            }
+                            else if (temp[1] == number[1])
+                            {
+                                currentBulls++;
+                            }
+                            else if (temp[1] == number[2])
+                            {
+                                currentCows++;
+                            }
+                            else if (temp[1] == number[3])
+                            {
+                                currentCows++;
+                            }
+                            //--- check for 3rd digit
+                            if (temp[2] == number[0])
+                            {
+                                currentCows++;
+                            }
+                            else if (temp[2] == number[1])
+                            {
+                                currentCows++;
+                            }
+                            else if (temp[2] == number[2])
+                            {
+                                currentBulls++;
+                            }
+                            else if (temp[2] == number[3])
+                            {
+                                currentCows++;
+                            }
+                            //--- check for 4th digit
+                            if (temp[3] == number[0])
+                            {
+                                currentCows++;
+                            }
+                            else if (temp[3] == number[1])
+                            {
+                                currentCows++;
+                            }
+                            else if (temp[3] == number[2])
+                            {
+                                currentCows++;
+                            }
+                            else if (temp[3] == number[3])
+                            {
+                                currentBulls++;
+                            }
+                            // check for total Bulls and Cows
+                            if (currentBulls == b && currentCows == c)
+                            {
+                                Console.Write("{0}{1}{2}{3} ", temp[0], temp[1], temp[2], temp[3]);
+                            }
                         }
                     }
                 }
             }
+            Console.WriteLine();
         }
     }
 }
