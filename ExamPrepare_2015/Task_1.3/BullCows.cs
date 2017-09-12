@@ -13,12 +13,7 @@ namespace Task_1._3
             int[] number = Console.ReadLine().Select(n => (Convert.ToInt32(n)) - 48).ToArray();
             int b = int.Parse(Console.ReadLine());
             int c = int.Parse(Console.ReadLine());
-
-            if (b == 3 && c != 0)
-            {
-                Console.WriteLine("No");
-                return;
-            }
+            bool foundNumber = false;
 
             int[] temp = new int[4];
 
@@ -36,93 +31,129 @@ namespace Task_1._3
                             temp[3] = l;
                             int currentBulls = 0;
                             int currentCows = 0;
+                            bool[] isMarkedTemp = new bool[4] { false, false, false, false };
+                            bool[] isMarkedNumber = new bool[4] { false, false, false, false };
+
+                            // check for Bulls
                             if (temp[3] == number[3])
                             {
                                 currentBulls++;
+                                isMarkedTemp[3] = true;
+                                isMarkedNumber[3] = true;
                             }
                             if (temp[2] == number[2])
                             {
                                 currentBulls++;
+                                isMarkedTemp[2] = true;
+                                isMarkedNumber[2] = true;
                             }
                             if (temp[1] == number[1])
                             {
                                 currentBulls++;
+                                isMarkedTemp[1] = true;
+                                isMarkedNumber[1] = true;
                             }
                             if (temp[0] == number[0])
                             {
                                 currentBulls++;
+                                isMarkedTemp[0] = true;
+                                isMarkedNumber[0] = true;
                             }
 
                             //--- check for 4th digit cows
-                           /* if (temp[3] == number[3])
-                            {
-                                currentBulls++;
-                            }*/
-                            if (temp[3] == number[2])
+                            if (temp[3] == number[2] && isMarkedTemp[3] == false && isMarkedNumber[2] == false)
                             {
                                 currentCows++;
+                                isMarkedTemp[3] = true;
+                                isMarkedNumber[2] = true;
                             }
-                            else if (temp[3] == number[1])
+                            else if (temp[3] == number[1] && isMarkedTemp[3] == false && isMarkedNumber[1] == false)
                             {
                                 currentCows++;
+                                isMarkedTemp[3] = true;
+                                isMarkedNumber[1] = true;
                             }
-                            else if (temp[3] == number[0])
+                            else if (temp[3] == number[0] && isMarkedTemp[3] == false && isMarkedNumber[0] == false)
                             {
                                 currentCows++;
+                                isMarkedTemp[3] = true;
+                                isMarkedNumber[0] = true;
                             }
                             //--- check for 3rd digit cows
-                            /*if (temp[2] == number[2])
-                            {
-                                currentBulls++;
-                            } */
-                            if (temp[2] == number[3])
+                            if (temp[2] == number[3] && isMarkedTemp[2] == false && isMarkedNumber[3] == false)
                             {
                                 currentCows++;
+                                isMarkedTemp[2] = true;
+                                isMarkedNumber[3] = true;
                             }
-                            else if (temp[2] == number[1])
+                            else if (temp[2] == number[1] && isMarkedTemp[2] == false && isMarkedNumber[1] == false)
                             {
                                 currentCows++;
+                                isMarkedTemp[2] = true;
+                                isMarkedNumber[1] = true;
                             }
-                            else if (temp[2] == number[0])
+                            else if (temp[2] == number[0] && isMarkedTemp[2] == false && isMarkedNumber[0] == false)
                             {
                                 currentCows++;
+                                isMarkedTemp[2] = true;
+                                isMarkedNumber[0] = true;
                             }
                             //--- check for 2nd digit cows
-                            if (temp[1] == number[3])
+                            if (temp[1] == number[3] && isMarkedTemp[1] == false && isMarkedNumber[3] == false)
                             {
                                 currentCows++;
+                                isMarkedTemp[1] = true;
+                                isMarkedNumber[3] = true;
                             }
-                            else if (temp[1] == number[2])
+                            else if (temp[1] == number[2] && isMarkedTemp[1] == false && isMarkedNumber[2] == false)
                             {
                                 currentCows++;
+                                isMarkedTemp[1] = true;
+                                isMarkedNumber[2] = true;
                             }
-                            else if (temp[1] == number[0])
+                            else if (temp[1] == number[0] && isMarkedTemp[1] == false && isMarkedNumber[0] == false)
                             {
                                 currentCows++;
+                                isMarkedTemp[1] = true;
+                                isMarkedNumber[0] = true;
                             }
                             //--- check for 1st digit cows
-                            if (temp[0] == number[3])
+                            if (temp[0] == number[3] && isMarkedTemp[0] == false && isMarkedNumber[3] == false)
                             {
                                 currentCows++;
+                                isMarkedTemp[0] = true;
+                                isMarkedNumber[3] = true;
                             }
-                            else if (temp[0] == number[2])
+                            else if (temp[0] == number[2] && isMarkedTemp[0] == false && isMarkedNumber[2] == false)
                             {
                                 currentCows++;
+                                isMarkedTemp[0] = true;
+                                isMarkedNumber[2] = true;
                             }
-                            else if (temp[0] == number[1])
+                            else if (temp[0] == number[1] && isMarkedTemp[0] == false && isMarkedNumber[1] == false)
                             {
                                 currentCows++;
+                                isMarkedTemp[0] = true;
+                                isMarkedNumber[1] = true;
                             }                           
                             // check for total Bulls and Cows
                             if ((currentBulls == b) && (currentCows == c))
                             {
+                                foundNumber = true;
                                 Console.Write("{0}{1}{2}{3} ", temp[0], temp[1], temp[2], temp[3]);
                             }
                         }
                     }
                 }
             }
-            Console.WriteLine();
+            if (!foundNumber)
+            {
+                Console.WriteLine("No");
+            }
+            else
+            {
+                Console.WriteLine();
+            }
         }
     }
 }
