@@ -87,27 +87,66 @@ namespace Task_2._6
                         (((rowLower & (1 << (col + 1))) != 0) && ((rowLower & (1 << col)) != 0) && ((rowLower & (1 << (col - 1))) != 0))
                     ;
 
-                if (isCookie)
+                if (cmd == cmdWhatIs)
                 {
-                    Console.WriteLine("cookie");
+                    if (isCookie)
+                    {
+                        Console.WriteLine("cookie");
+                    }
+                    else if (isCookieBroken)
+                    {
+                        Console.WriteLine("broken cookie");
+                    }
+                    else if (isCookieCrumb)
+                    {
+                        Console.WriteLine("cookie crumb");
+                    }
+                    else
+                    {
+                        Console.WriteLine("smile");
+                    }
                 }
-                else if (isCookieBroken)
+                else if (cmd == cmdBuy)
                 {
-                    Console.WriteLine("broken cookie");
-                }
-                else if (isCookieCrumb)
-                {
-                    Console.WriteLine("cookie crumb");
-                }
-                else
-                {
-                    Console.WriteLine("smile");
+                    if (isCookie)
+                    {
+                        // TODO
+                        cookiesNumber++;
+                        // zero cookie
+                        rowUpper ^= (1 << (col + 1));
+                        rowUpper ^= (1 << col);
+                        rowUpper ^= (1 << (col - 1));
+                        rowMiddle ^= (1 << (col + 1));
+                        rowMiddle ^= (1 << col);
+                        rowMiddle ^= (1 << (col - 1));
+                        rowLower ^= (1 << (col + 1));
+                        rowLower ^= (1 << col);
+                        rowLower ^= (1 << (col - 1));
+
+                        rows[row - 1] = rowUpper;
+                        rows[row] = rowMiddle;
+                        rows[row + 1] = rowLower;
+                        // zero cookie
+                    }
+                    else if (isCookieBroken)
+                    {
+                        Console.WriteLine("page");
+                    }
+                    else if (isCookieCrumb)
+                    {
+                        Console.WriteLine("page");
+                    }
+                    else
+                    {
+                        Console.WriteLine("smile");
+                    }
                 }
 
 
 
 
             }
+            Console.WriteLine("{0:0.00}", cookiesNumber * cookiePrice);
         }
     }
 }
