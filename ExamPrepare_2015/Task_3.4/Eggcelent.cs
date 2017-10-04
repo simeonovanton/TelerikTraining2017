@@ -34,19 +34,51 @@ namespace Task_3._4
             Console.WriteLine();
 
             //upper /
-                // 1/3
-                for (int j = 0; j < n + 1; j++) //((3n+1) - (n-1)) / 2 ====> n + 1
+            for (int j = 0; j < (n - 2) / 2; j++)
+            {   
+                //first 1/3
+                for (int i = 0; i < n + 1 - (j + 1) * 2; i++) //((3n+1) - (n-1)) / 2 ====> n + 1
                 {
-
+                    Console.Write('.');
                 }
-                // 2/3
-
-                // 3/3
+                Console.Write('*');
+                for (int i = 0; i < (2 * j + 1); i++)
+                {
+                    Console.Write('.');
+                }
+                //middle 1/3
+                for (int i = 0; i < top; i++)
+                {
+                    Console.Write('.');
+                }
+                //last 1/3
+                for (int i = 0; i < (2 * j + 1); i++)
+                {
+                    Console.Write('.');
+                }
+                Console.Write('*');
+                for (int i = 0; i < n + 1 - (j + 1) * 2; i++) //((3n+1) - (n-1)) / 2 ====> n + 1
+                {
+                    Console.Write('.');
+                }
+                //new line
+                Console.WriteLine();
+            }
 
 
 
             //upper |
-            
+            for (int j = 0; j < (n - 2) / 2; j++) 
+            {
+                Console.Write(".*");
+                for (int i = 0; i < (3 * n) + 1 - 4; i++)
+                {
+                    Console.Write('.');
+                }
+                Console.Write("*.");
+                Console.WriteLine();
+            }
+
             //upper middle
             Console.Write(".*");
             for (int i = 0; i <= (width - 2) / 2; i++)
@@ -74,6 +106,50 @@ namespace Task_3._4
             }
             Console.Write("*.");
             Console.WriteLine();
+
+            //lower |
+            for (int j = 0; j < (n - 2) / 2; j++) 
+            {
+                Console.Write(".*");
+                for (int i = 0; i < (3 * n) + 1 - 4; i++)
+                {
+                    Console.Write('.');
+                }
+                Console.Write("*.");
+                Console.WriteLine();
+            }
+
+            //lower \
+            for (int j = (n - 2) / 2 - 1; j >= 0; j--)
+            {
+                //first 1/3
+                for (int i = 0; i < n + 1 - (j + 1) * 2; i++) //((3n+1) - (n-1)) / 2 ====> n + 1
+                {
+                    Console.Write('.');
+                }
+                Console.Write('*');
+                for (int i = 0; i < (2 * j + 1); i++)
+                {
+                    Console.Write('.');
+                }
+                //middle 1/3
+                for (int i = 0; i < top; i++)
+                {
+                    Console.Write('.');
+                }
+                //last 1/3
+                for (int i = 0; i < (2 * j + 1); i++)
+                {
+                    Console.Write('.');
+                }
+                Console.Write('*');
+                for (int i = 0; i < n + 1 - (j + 1) * 2; i++) //((3n+1) - (n-1)) / 2 ====> n + 1
+                {
+                    Console.Write('.');
+                }
+                //new line
+                Console.WriteLine();
+            }
 
             //bottom
             for (int i = 0; i <= n; i++)
