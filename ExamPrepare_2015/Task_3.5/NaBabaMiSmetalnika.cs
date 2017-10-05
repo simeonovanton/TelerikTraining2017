@@ -9,6 +9,14 @@ class NaBabaMiSmetalnika
     static void Main()
     {
         int width = int.Parse(Console.ReadLine()); //width
+        if (width < 5)
+        {
+            width = 5;
+        }
+        else if (width > 32)
+        {
+            width = 32;
+        }
 
         // input of lines
         int[] l = new int[8];
@@ -48,6 +56,15 @@ class NaBabaMiSmetalnika
             }
             int row = int.Parse(Console.ReadLine());
             int col = int.Parse(Console.ReadLine());
+            //check for col( -50 to 50)
+            if (col < 0)
+            {
+                col = 0;
+            }
+            else if (col > (width - 1))
+            {
+                col = width - 1;
+            }
 
             if (cmd == cmdRight)
             {
