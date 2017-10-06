@@ -53,9 +53,9 @@ class NaBabaMiSmetalnika
             {
                 col = 0;
             }
-            else if (col > 31)
+            else if (col > width - 1)
             {
-                col = 31;
+                col = width - 1;
             }
 
             if (cmd == cmdRight)
