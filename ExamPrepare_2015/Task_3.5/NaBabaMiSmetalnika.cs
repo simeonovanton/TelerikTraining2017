@@ -9,20 +9,12 @@ class NaBabaMiSmetalnika
     static void Main()
     {
         int width = int.Parse(Console.ReadLine()); //width
-        if (width < 5)
-        {
-            width = 5;
-        }
-        else if (width > 32)
-        {
-            width = 32;
-        }
 
         // input of lines
-        int[] l = new int[8];
+        uint[] l = new uint[8];
         for (int i = 0; i < 8; i++)
         {
-            l[i] = int.Parse(Console.ReadLine());
+            l[i] = uint.Parse(Console.ReadLine());
         }
         string cmd = Console.ReadLine(); ;
         string cmdReset = "reset";
@@ -45,8 +37,8 @@ class NaBabaMiSmetalnika
                     {
                         if ((l[red] & (1 << i)) != 0)
                         {
-                            l[red] ^= (1 << i);
-                            l[red] |= (1 << marker);
+                            l[red] ^= (uint)(1 << i);
+                            l[red] |= (uint)(1 << marker);
                             marker--;
                         }
                     }
@@ -61,9 +53,9 @@ class NaBabaMiSmetalnika
             {
                 col = 0;
             }
-            else if (col > (width - 1))
+            else if (col > 31)
             {
-                col = width - 1;
+                col = 31;
             }
 
             if (cmd == cmdRight)
@@ -73,8 +65,8 @@ class NaBabaMiSmetalnika
                 {
                     if ((l[row] & (1 << i)) != 0)
                     {
-                        l[row] ^= (1 << i);
-                        l[row] |= (1 << marker);
+                        l[row] ^= (uint)(1 << i);
+                        l[row] |= (uint)(1 << marker);
                         marker++;
                     }
 
@@ -87,11 +79,10 @@ class NaBabaMiSmetalnika
                 {
                     if ((l[row] & (1 << i)) != 0)
                     {
-                        l[row] ^= (1 << i);
-                        l[row] |= (1 << marker);
+                        l[row] ^= (uint)(1 << i);
+                        l[row] |= (uint)(1 << marker);
                         marker--;
                     }
-
                 }
             }
             cmd = Console.ReadLine();
@@ -100,7 +91,7 @@ class NaBabaMiSmetalnika
         //Console.WriteLine(Convert.ToString(l[0], 2).PadLeft(32, '0'));
 
         // sum of the numbers in the lines
-        int sum = 0;
+        ulong sum = 0;
         for (int i = 0; i < 8; i++)
         {
             sum += l[i];
@@ -124,7 +115,7 @@ class NaBabaMiSmetalnika
             }
         }
 
-        int result = zeros * sum;
+        ulong result = (ulong)zeros * sum;
         Console.WriteLine(result);
     }
 }
