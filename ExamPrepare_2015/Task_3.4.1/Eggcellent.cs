@@ -13,8 +13,8 @@ class Eggcellent
 
         int height = 2 * n;
         int width = 3 * n + 1;
-        int top = n - 1;
-        int bottom = n - 1;
+        //int top = n - 1;
+        //int bottom = n - 1;
 
         for (int row = 0; row < height; row++)
         {
